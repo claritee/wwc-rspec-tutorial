@@ -1,9 +1,12 @@
 require_relative '../calculator'
 
-RSpec.describe Calculator do
+describe Calculator do
   describe "add" do
-    it "no numbers" do
-      expect(Calculator.add).to eq(0)
+    it "numbers" do
+      expect(Calculator.add(1, 2)).to eq(3)
+    end
+    it "negative numbers" do
+      expect(Calculator.add(1, -2)).to eq(-1)
     end
   end
 end

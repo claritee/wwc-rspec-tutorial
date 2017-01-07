@@ -1,5 +1,9 @@
 class Calculator
-	def self.add(*numbers)
-		numbers.inject(0) { |sum, x| sum + x } #same thing: numbers.reduce(0, :+)
-	end
+  def self.add(a, b)
+    a + b
+  end
+
+  def self.subtract(a, b)
+    a - b
+  end
 end
