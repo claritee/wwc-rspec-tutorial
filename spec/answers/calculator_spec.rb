@@ -1,4 +1,5 @@
 require_relative '../../answers/calculator'
+require_relative '../../history'
 
 # NOTE: uncomment this to run
 describe Calculator do
@@ -43,26 +44,32 @@ describe Calculator do
   #   end
   # end
   #
-  # describe "mode" do
-  #   it "should be set to 'scientific'" do
-  #     mycalc = Calculator.new('scientific')
-  #     expect(mycalc.mode).to eq('scientific')
+  # describe "history" do
+  #   it "should save a result" do
+  #     history = History.new
+  #     mycalc = Calculator.new(history)
+  #     result = Calculator.add(1, 1)
+  #     mycalc.save_result(result)
+  #
+  #     expect(history.last_result).to eq(2)
   #   end
-  #   it "mode should get mocked" do
-  #     mycalc = double(:Calculator)
-  #     allow(mycalc).to receive(:mode).and_return('scientific')
-  #     expect(mycalc.mode).to eq('scientific')
-  #   end
-  #   it "mode does not gets mocked" do
-  #     mycalc = double(:Calculator)
-  #     allow(mycalc).to receive(:mode).and_return('scientific')
-  #     # expect(mycalc.message).to eq("I'm a calculator") # this line will fail when executed
+  #
+  #   it "should be mocked" do
+  #     history = double(:History)
+  #     mycalc = Calculator.new(history)
+  #
+  #     # set up mocked values
+  #     allow(history).to receive(:save).and_return(5)
+  #     allow(history).to receive(:last_result).and_return(5)
+  #
+  #     # expectations
+  #     expect(mycalc.last_result).to eq(5)
   #   end
   # end
   #
   # describe "supported symbols" do
   #   it "should include the '+' symbol" do
-  #     mycalc = Calculator.new('scientific', ["+", "-", "/", "*"])
+  #     mycalc = Calculator.new(History.new, ["+", "-", "/", "*"])
   #     expect(mycalc.supported_symbols).to include("+")
   #   end
   # end

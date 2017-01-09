@@ -1,11 +1,11 @@
 class Calculator
 
-  attr_accessor :mode
   attr_accessor :supported_symbols
+  attr_accessor :history
 
-  def initialize(mode, supported_symbols = [])
-    self.mode = mode
+  def initialize(history, supported_symbols = [])
     self.supported_symbols = supported_symbols
+    self.history = history
   end
 
   def self.add(a, b)
@@ -26,7 +26,15 @@ class Calculator
   def self.abs_add(a, b)
   end
 
+  def save_result(result)
+    history.save(result)
+  end
+
+  def last_result
+    history.last_result
+  end
+
   def message
-    "I'm a calculator"
+    "I'm a calculator, my last result was #{history.last_result}"
   end
 end
