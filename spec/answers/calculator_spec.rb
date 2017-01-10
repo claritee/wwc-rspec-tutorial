@@ -38,7 +38,7 @@ describe Calculator do
   # end
   #
   # describe "absolute add" do
-  #   it "returns a result a mocked" do
+  #   it "returns a result that is stubbed" do
   #     allow(Calculator).to receive(:abs_add).and_return(10)
   #     expect(Calculator.abs_add(-5, -5)).to eq(10)
   #   end
@@ -78,6 +78,7 @@ describe Calculator do
   #     # expectations
   #     expect(mycalc.last_result).to eq(5)
   #   end
+  #
   # end
   #
   # describe "supported symbols" do

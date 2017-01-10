@@ -1,8 +1,6 @@
 class Calculator
 
-  attr_accessor :mode
-  attr_accessor :supported_symbols
-  attr_accessor :history
+  attr_accessor :mode, :history, :supported_symbols
 
   def initialize(mode, history, supported_symbols = [])
     self.mode = mode
