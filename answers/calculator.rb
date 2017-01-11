@@ -33,8 +33,4 @@ class Calculator
   def last_result
     history.last_result
   end
-
-  def message
-    "I'm a calculator, my last result was #{history.last_result}"
-  end
 end
