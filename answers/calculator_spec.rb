@@ -38,6 +38,8 @@ describe Calculator do
 
   describe "absolute add" do
     it "returns a stubbed result of 10 when -5 and -5 is added using abs_add" do
+      allow(Calculator).to receive(:abs_add).and_return(10)
+      expect(Calculator.abs_add(-5, -5)).to eq(10)
     end
   end
 
