@@ -30,4 +30,4 @@ The tutorial will use these files to work on
 The answers can be found in:
 
 * answers/calculator.rb
-* spec/answers/calculator_spec.rb
+* answers/calculator_spec.rb
